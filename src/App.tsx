@@ -12,19 +12,36 @@ const App: Component = () => {
   }
 
   const isElementarySchool = (age) => {
-    return age <= 11 && age > 5
+    return age >= 6 && age <= 11 
+  }
+
+  const isMiddleSchool = (age) => {
+    return age >= 12 && age <= 14 
+  }
+
+  const isHighSchool = (age) => {
+    return age >= 15 && age <= 18 
+  }
+
+  const isCollege = (age) => {
+    return age >= 19 && age <= 22 
   }
 
   const squareColour = (x, y) => {
     const age = x + 10 * y + 1
-    if (isEarlyYears(age)) {
-      "red"
-    }
-    else if (isElementarySchool(age)) {
-      return "blue"
-    } 
-    else {
-      return "yellow"
+    switch (true) {
+      case isEarlyYears(age):
+        return "lightblue"
+      case isElementarySchool(age):
+        return "darkgreen"
+      case isMiddleSchool(age):
+        return "lightgreen"
+      case isHighSchool(age):
+        return "yellow"
+      case isCollege(age):
+        return "orange"
+      default:
+        return "purple"
     }
   }
 
