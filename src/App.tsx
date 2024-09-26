@@ -5,38 +5,64 @@ import Square from './Square'
 
 const App: Component = () => {
   const rows = Array.from(Array(10).keys())
-  const grid = rows.map(row => Array.from(Array(10).keys()))
+  const grid = rows.map(_ => Array.from(Array(10).keys()))
+
+  const weeksRows = Array.from(Array(89).keys())
+  const weeksGrid = weeksRows.map(_ => Array.from(Array(52).keys()))
 
   const isEarlyYears = (age) => {
-    return age <= 5
+    return age <= 5.5
   }
 
   const isElementarySchool = (age) => {
-    return age >= 6 && age <= 11 
+    return age > 5 && age <= 11.5
   }
 
   const isMiddleSchool = (age) => {
-    return age >= 12 && age <= 14 
+    return age > 11 && age <= 14.5
   }
 
   const isHighSchool = (age) => {
-    return age >= 15 && age <= 18 
+    return age > 14 && age <= 18.5
   }
 
   const isCollege = (age) => {
-    return age >= 19 && age <= 22 
+    return age > 18 && age <= 22.5
   }
 
   const isCareer = (age) => {
-    return age >= 23 && age <= 62 
+    return age > 22 && age <= 62
   }
 
   const isRetirement = (age) => {
-    return age >= 63 
+    return age > 62
   }
 
   const squareColour = (x, y) => {
     const age = x + 10 * y + 1
+    switch (true) {
+      case isEarlyYears(age):
+        return "lightblue"
+      case isElementarySchool(age):
+        return "darkgreen"
+      case isMiddleSchool(age):
+        return "lightgreen"
+      case isHighSchool(age):
+        return "yellow"
+      case isCollege(age):
+        return "orange"
+      case isCareer(age):
+        return "red"
+      case isRetirement(age):
+        return "purple"
+      default:
+        console.warn(`Don't know how to handle the age ${age}`)
+        return "black"
+    }
+  }
+
+  const squareColourYear = (x, y) => {
+    const age = (((52 * y) + x) / 52).toFixed(2)
     switch (true) {
       case isEarlyYears(age):
         return "lightblue"
@@ -64,8 +90,16 @@ const App: Component = () => {
 
     <p>Each row is a decade.</p>
 
-    <svg width="100%" height="1400">
+    <svg width="100%" height="1200">
       {grid.map((row, y) => row.map((cell, x) => <Square x={10 + 110*(x)} y={10 + 110*y} fill={squareColour(x, y)}/>))}
+    </svg>
+
+    <h1>Your life in weeks</h1>
+
+    <p>Each row is a year.</p>
+
+    <svg width="100%" height="1600">
+      {weeksGrid.map((row, y) => row.map((cell, x) => <Square x={10 + 13*(x)} y={10 + 13*y} fill={squareColourYear(x, y)} width={10} height={10} strokeWidth={1}/>))}
     </svg>
     
     <p>yzAlvin</p>
