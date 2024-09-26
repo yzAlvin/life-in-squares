@@ -1,7 +1,8 @@
 import type { Component } from 'solid-js';
 
-import logo from './logo.svg';
 import styles from './App.module.css';
+
+import Square from './Square'
 
 const App: Component = () => {
   return (
@@ -12,7 +13,8 @@ const App: Component = () => {
 
     <svg width="100%" height="100vh">
         <rect x="10" y="10" width="100" height="100" stroke="black" stroke-width="3" fill="blue" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover" />
-        <rect x="120" y="10" width="100" height="100" stroke="black" stroke-width="3" fill="yellow" />
+        <Square x={10 + 110*3}/>
+        <Square x={10 + 110*1}/>
         <rect x="230" y="10" width="100" height="100" stroke="black" stroke-width="3" fill="yellow" />
         <rect x="340" y="10" width="100" height="100" stroke="black" stroke-width="3" fill="yellow" />
         <rect x="450" y="10" width="100" height="100" stroke="black" stroke-width="3" fill="yellow" />

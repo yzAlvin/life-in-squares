@@ -2,9 +2,7 @@
 import { render } from 'solid-js/web';
 
 import './index.css';
-import './scss/styles.scss'
 import App from './App';
-import { Popover } from 'bootstrap';
 
 const root = document.getElementById('root');
 
@@ -15,8 +13,3 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(() => <App />, root!);
-
-document.querySelectorAll('[data-bs-toggle="popover"]')
-  .forEach(popover => {
-    new Popover(popover)
-  })

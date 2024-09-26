@@ -8,16 +8,13 @@ importers:
 
   .:
     dependencies:
-      bootstrap:
-        specifier: 5.3.3
-        version: 5.3.3(@popperjs/core@2.11.8)
+      solid-bootstrap:
+        specifier: ^1.0.20
+        version: 1.0.20(solid-js@1.8.11)
       solid-js:
         specifier: ^1.8.11
         version: 1.8.11
     devDependencies:
-      sass:
-        specifier: ^1.79.3
-        version: 1.79.3
       solid-devtools:
         specifier: ^0.29.2
         version: 0.29.2(solid-js@1.8.11)(vite@5.0.11(sass@1.79.3))
@@ -196,6 +193,10 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
+
+  '@babel/runtime@7.25.6':
+    resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/template@7.22.15':
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -557,11 +558,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0
 
-  bootstrap@5.3.3:
-    resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
-    peerDependencies:
-      '@popperjs/core': ^2.11.8
-
   browserslist@4.22.2:
     resolution: {integrity: sha512-0UgcrvQmBDvZHFGdYUehrCNIazki7/lUP3kkoi/r3YB2amZbFM9J43ZRkJTXBUZK4gmx56+Sqk9+Vs9mwZx9+A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -598,6 +594,9 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
+
+  dom-helpers@5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
 
   electron-to-chromium@1.4.639:
     resolution: {integrity: sha512-CkKf3ZUVZchr+zDpAlNLEEy2NJJ9T64ULWaDgy3THXXlPVPkLu3VOs9Bac44nebVtdwl2geSj6AxTtGDOxoXhg==}
@@ -684,6 +683,9 @@ packages:
     resolution: {integrity: sha512-GkMg9uOTpIWWKbSsgwb5fA4EavTR+SG/PMPoAY8hkhHfEEY0/vqljY+XHqtDf2cr2IJtoNRDbrrEpZUiZCkYRw==}
     engines: {node: '>= 14.16.0'}
 
+  regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   rollup@4.9.5:
     resolution: {integrity: sha512-E4vQW0H/mbNMw2yLSqJyjtkHY9dslf/p0zuT1xehNRqUTBOFMqEjguDvqhXr7N7r/4ttb2jr4T41d3dncmIgbQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -708,6 +710,16 @@ packages:
     resolution: {integrity: sha512-qQs/N+KfJu83rmszFQaTxcoJoPn6KNUruX4KmnmyD0oZkUoiNvJ1rpdYKDf4YHM05k+HOgCxa3yvf15QbVijGg==}
     engines: {node: '>=10'}
 
+  solid-bootstrap-core@2.0.0:
+    resolution: {integrity: sha512-tw1me1iEvI+UzYRL2Gs53MP51WVwx785CU+6KQVGhaLESw3OoayeFLhe1CvUYb7kuskjtNGyAorZMdMwBJQIBA==}
+    peerDependencies:
+      solid-js: '>=1.6.0'
+
+  solid-bootstrap@1.0.20:
+    resolution: {integrity: sha512-2Dhmg+lcEzrjBHh04XmVESFda/EVMwyr0Zx4w6r7cOeQBxz4JtX5AQRwv6cXx3AC9ZjBdeOlYpVtH/hO/wb/1A==}
+    peerDependencies:
+      solid-js: '>=1.6.0'
+
   solid-devtools@0.29.2:
     resolution: {integrity: sha512-sfGLBSIQ3E5dFha5UCE5wKnz+War99JNAOggfBbwhltXL8lbIG1PnKKB9N2pvloZuFzMtT/u1Qbb/ubqXnw2Sg==}
     peerDependencies:
@@ -722,6 +734,11 @@ packages:
 
   solid-js@1.8.11:
     resolution: {integrity: sha512-WdwmER+TwBJiN4rVQTVBxocg+9pKlOs41KzPYntrC86xO5sek8TzBYozPEZPL1IRWDouf2lMrvSbIs3CanlPvQ==}
+
+  solid-react-transition@1.0.11:
+    resolution: {integrity: sha512-YMT7z6sOupCicDtX19156vbVOm3vCIgjVhPTybR9gLKiIPrDB2NDVqnQk4kpNCDZTOwSjLTOyUQw0xJnXgDg2A==}
+    peerDependencies:
+      solid-js: '>=1.6.0'
 
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
@@ -992,6 +1009,10 @@ snapshots:
       '@babel/plugin-syntax-jsx': 7.23.3(@babel/core@7.23.7)
       '@babel/plugin-transform-modules-commonjs': 7.23.3(@babel/core@7.23.7)
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.23.7)
+
+  '@babel/runtime@7.25.6':
+    dependencies:
+      regenerator-runtime: 0.14.1
 
   '@babel/template@7.22.15':
     dependencies:
@@ -1311,10 +1332,6 @@ snapshots:
       '@babel/core': 7.23.7
       babel-plugin-jsx-dom-expressions: 0.37.13(@babel/core@7.23.7)
 
-  bootstrap@5.3.3(@popperjs/core@2.11.8):
-    dependencies:
-      '@popperjs/core': 2.11.8
-
   browserslist@4.22.2:
     dependencies:
       caniuse-lite: 1.0.30001579
@@ -1333,6 +1350,7 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.1
+    optional: true
 
   color-convert@1.9.3:
     dependencies:
@@ -1347,6 +1365,11 @@ snapshots:
   debug@4.3.4:
     dependencies:
       ms: 2.1.2
+
+  dom-helpers@5.2.1:
+    dependencies:
+      '@babel/runtime': 7.25.6
+      csstype: 3.1.2
 
   electron-to-chromium@1.4.639: {}
 
@@ -1391,7 +1414,8 @@ snapshots:
 
   html-entities@2.3.3: {}
 
-  immutable@4.3.7: {}
+  immutable@4.3.7:
+    optional: true
 
   is-what@4.1.15: {}
 
@@ -1423,7 +1447,10 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  readdirp@4.0.1: {}
+  readdirp@4.0.1:
+    optional: true
+
+  regenerator-runtime@0.14.1: {}
 
   rollup@4.9.5:
     dependencies:
@@ -1449,6 +1476,7 @@ snapshots:
       chokidar: 4.0.1
       immutable: 4.3.7
       source-map-js: 1.0.2
+    optional: true
 
   semver@6.3.1: {}
 
@@ -1457,6 +1485,20 @@ snapshots:
       seroval: 1.0.4
 
   seroval@1.0.4: {}
+
+  solid-bootstrap-core@2.0.0(solid-js@1.8.11):
+    dependencies:
+      '@popperjs/core': 2.11.8
+      dom-helpers: 5.2.1
+      solid-js: 1.8.11
+      solid-react-transition: 1.0.11(solid-js@1.8.11)
+
+  solid-bootstrap@1.0.20(solid-js@1.8.11):
+    dependencies:
+      dom-helpers: 5.2.1
+      solid-bootstrap-core: 2.0.0(solid-js@1.8.11)
+      solid-js: 1.8.11
+      solid-react-transition: 1.0.11(solid-js@1.8.11)
 
   solid-devtools@0.29.2(solid-js@1.8.11)(vite@5.0.11(sass@1.79.3)):
     dependencies:
@@ -1476,6 +1518,10 @@ snapshots:
       csstype: 3.1.2
       seroval: 1.0.4
       seroval-plugins: 1.0.4(seroval@1.0.4)
+
+  solid-react-transition@1.0.11(solid-js@1.8.11):
+    dependencies:
+      solid-js: 1.8.11
 
   solid-refresh@0.6.3(solid-js@1.8.11):
     dependencies:
