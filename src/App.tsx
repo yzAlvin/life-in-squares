@@ -99,7 +99,7 @@ const App: Component = () => {
     <p>Each row is a year.</p>
 
     <svg width="100%" height="1600">
-      {weeksGrid.map((row, y) => row.map((cell, x) => <Square x={10 + 13*(x)} y={10 + 13*y} fill={squareColourYear(x, y)} width={10} height={10} strokeWidth={1}/>))}
+      {weeksGrid.map((row, y) => row.map((cell, x) => <Square x={10 + 10*(x)} y={10 + 10*y} fill={squareColourYear(x, y)} width={7} height={7} strokeWidth={0.5}/>))}
     </svg>
     
     <p>yzAlvin</p>
