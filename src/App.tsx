@@ -27,6 +27,14 @@ const App: Component = () => {
     return age >= 19 && age <= 22 
   }
 
+  const isCareer = (age) => {
+    return age >= 23 && age <= 62 
+  }
+
+  const isRetirement = (age) => {
+    return age >= 63 
+  }
+
   const squareColour = (x, y) => {
     const age = x + 10 * y + 1
     switch (true) {
@@ -40,8 +48,13 @@ const App: Component = () => {
         return "yellow"
       case isCollege(age):
         return "orange"
-      default:
+      case isCareer(age):
+        return "red"
+      case isRetirement(age):
         return "purple"
+      default:
+        console.warn(`Don't know how to handle the age ${age}`)
+        return "black"
     }
   }
 
